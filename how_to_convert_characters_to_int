@@ -1,0 +1,20 @@
+1. How to convert characters of a character array(that stores digits) to int 
+-------------------------------------------------------------------------
+
+char a[50];
+cin>>a;
+
+int i=0;
+for( ;a[i]!='\0'; i++){
+	
+	int digit = a[i] - '0';     // i.e. subtracting the ASCII value of 0 from the ASCII value of the character to get the digit
+	if(digit >= 5){
+		digit = 9 - digit;
+		a[i] = digit + '0';     // i.e. adding the ASCII value of 0 to the value of the digit to get the character ASCII value
+	}
+
+}
+
+2. cin.getline()
+----------------
+cin.getline(<name of character array> , <max size> , <delimiter (mostly \n)>);

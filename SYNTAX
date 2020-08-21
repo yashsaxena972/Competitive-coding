@@ -1,0 +1,73 @@
+1. How to convert characters of a character array(that stores digits) to int 
+-------------------------------------------------------------------------
+
+char a[50];
+cin>>a;
+
+int i=0;
+for( ;a[i]!='\0'; i++){
+	
+	int digit = a[i] - '0';     // i.e. subtracting the ASCII value of 0 from the ASCII value of the character to get the digit
+	if(digit >= 5){
+		digit = 9 - digit;
+		a[i] = digit + '0';     // i.e. adding the ASCII value of 0 to the value of the digit to get the character ASCII value
+	}
+
+}
+
+2. cin.getline()
+----------------
+// Reading character array having whitespaces
+cin.getline(<name of character array> , <max size> , <delimiter (optional,mostly \n)>);
+
+3. character array
+------------------
+// To find the length
+int length = strlen(a);
+
+// To compare 2 character arrays
+if(strcmp(c1,c2)==0)
+
+
+4. string
+---------
+#include<cstring>
+
+// Declaring a string
+string s("Hello World!");  or  string s = "Hello World!";
+
+// Reading a string
+getline(cin,s);
+
+// Length 
+s.length();
+
+// Sorting an array of strings  (also works for int array) ******
+#include <algorithm>
+string arr[] = {"Apple","Banana","Pinapple","Mango","Guava"};
+sort(arr,arr+5);
+
+// If we want to sort the array of strings based on the length of the strings,
+// we can make a custom function
+bool compare(string a,string b){
+	return a.length()>b.length();
+}
+
+sort(arr,arr+5,compare);
+
+// To compare 2 strings
+if(s1 == s2)
+
+5. String Tokenizer
+-------------------
+#include<cstring>
+
+char str[] = "Hi I am Yash Saxena";
+char *ptr;
+
+ptr = strtok(str," ");
+
+while(ptr != NULL){
+	cout<<ptr<<endl;
+	ptr = strtok(NULL," ");
+}

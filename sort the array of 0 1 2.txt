@@ -1,0 +1,20 @@
+Dutch National Flag Algorithm
+_____________________________
+
+lo = 0;
+mid = 0;
+hi = size-1;
+while(mid <= hi){
+	if(arr[mid] == 1){
+		mid++;
+	}
+	else if(arr[mid] == 2){
+		swap(arr[mid],arr[hi]);
+		hi--;
+	}
+	else{
+		swap(arr[mid],arr[lo]);
+		mid++;
+		lo++;
+	}
+}

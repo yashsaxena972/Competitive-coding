@@ -1,0 +1,2 @@
+In this, we have to sort the elements in such a way that alternate elements form maxima and minima.
+To achieve this, we look for the elements to the right and to the right of elements at even indices
